@@ -27,3 +27,46 @@ Loop
 Application.ScreenUpdating = False
    
 End Sub
+
+
+{
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnSave": true,
+  "typescript.validate.enable": false,
+  "files.autoSave": "afterDelay",
+  "window.zoomLevel": -1,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "git.autofetch": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_line_length": 120,
+      // 对属性进行换行。
+      // - auto: 仅在超出行长度时才对属性进行换行。
+      // - force: 对除第一个属性外的其他每个属性进行换行。
+      // - force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐。
+      // - force-expand-multiline: 对每个属性进行换行。
+      // - aligned-multiple: 当超出折行长度时，将属性进行垂直对齐。
+      "wrap_attributes": "auto",
+      "end_with_newline": false
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnType": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  //设置窗口不被覆盖
+  "workbench.editor.enablePreview": false,
+"workbench.editor.showTabs": true,
+"workbench.editor.wrapTabs": true,
+"typescript.updateImportsOnFileMove.enabled": "always",
+"[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+} // 设置标签栏换行显示
+}
