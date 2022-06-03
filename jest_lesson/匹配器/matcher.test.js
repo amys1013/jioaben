@@ -3,12 +3,11 @@
 
 // "scripts": {
 //     "test": "jest --watchAll",  监视所有文件的变化
-//     "coverage": "npx jest --coverage"
 //   },
 
 // 1. toBe匹配器   object.is ===
 
-test("测试加法", () => {
+test("测试加法1 ", () => {
   expect(10).toBe(10);
 });
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "math.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest --watch",
     "coverage": "npx jest --coverage"
   },
   "author": "",
