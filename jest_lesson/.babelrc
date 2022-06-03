@@ -1,0 +1,17 @@
+{
+    "presets": [
+        ["@babel/preset-env",{
+            "targets":{
+                // 表示当前的环境下，然后使用babel转化成commonjs语法
+                "node":"current"
+            }
+        }]
+    ]
+}
+
+// npm run jest
+// jest (babel-jest插件)
+// jest 内部集成了一个插件：babel-jest.会检测当前的环境下是否安装了babel或者babel-core
+// 如果安装了babel，会拿babelrc里面的配置
+// 在运行测试前，结合babel进行代码装换，然后运行转化后的测试用例代码
+// 则可以使用esmodule语法export 了
