@@ -1,0 +1,21 @@
+{
+  "name": "haha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "type": "module",
+  "bin": "./bin/index.js",
+  "exports": "./bin/index.js",
+  "scripts": {
+    "test": "rimraf node_modules && cnpm i && rimraf ./hei && node ./bin/index.js",
+    "run": "rimraf ./hei && node ./bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "^3.1.8",
+    "execa": "^6.1.0",
+    "inquirer": "^8.2.4"
+  },
+  "dependencies": {}
+}
