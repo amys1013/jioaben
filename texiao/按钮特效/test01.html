@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            border: none;
+        }
+
+        .wrapper {
+            display: flex;
+
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            box-shadow: 0 0 5px pink;
+            background-color: white;
+            cursor: pointer;
+            position: relative;
+            transition: 0.5s;
+            /* transition: 0.2s; */
+        }
+
+        .button::before,
+        .button::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            background-color: pink;
+            width: 80%;
+            height: 80%;
+            top: calc(50% - 80%/2);
+            left: calc(50% - 80%/2);
+            z-index: -1;
+
+            /* transition: all 0.5s; */
+            opacity: 0;
+
+            /* transition: 0.5s; */
+
+        }
+
+        /* .button:active::before {
+            animation: anim_radar_after 0.2s infinite;
+        } */
+
+        .button:active::after {
+            /* 使用动画使该圆不断体积扩大 */
+            animation: anim_radar_after 0.1s infinite;
+            transition: 0s;
+        }
+
+        @keyframes anim_radar_after {
+            100% {
+                transform: scale(3);
+                opacity: 0.2;
+                /* transition: 0s; */
+            }
+        }
+
+
+        :root {
+            --primary-color: royalblue;
+        }
+
+        .button1 {
+            padding: 5px 16px;
+            color: #000000d9;
+            border: 1px solid #d9d9d9;
+            background-color: transparent;
+            border-radius: 2px;
+            line-height: 1.4;
+            box-shadow: 0 2px #00000004;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .button1:hover {
+            color: var(--primary-color);
+            border-color: currentColor;
+        }
+
+
+
+        .button1::after {
+            /*其余款式*/
+            opacity: 0;
+            box-shadow: 0 0 0 6px var(--primary-color);
+            transition: .3s;
+        }
+
+        /*点击*/
+        .button1:active::after {
+            box-shadow: none;
+            opacity: 0.4;
+            transition: 0s;
+            /*勾销过渡*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button class="button">按住</button>
+    </div>
+</body>
+
+</html>
